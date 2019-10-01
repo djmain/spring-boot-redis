@@ -26,4 +26,10 @@ public class BookController
     {
         return bookService.getBook(id);
     }
+
+    @GetMapping("cache/test")
+    public String getName()
+    {
+        return bookService.getName(1);
+    }
 }

@@ -35,4 +35,17 @@ public class BookService
         log.info("未命中缓存, id:{}", id);
         return new Book(id, "Java编程思想", 99);
     }
+
+    /**
+     * redis中的key是name::1
+     * 127.0.0.1:6379> get name::1
+     * "\xac\xed\x00\x05t\x00\bwangming"
+     * @param id
+     * @return
+     */
+    @Cacheable(key = "#id", value = "name")
+    public String getName(long id)
+    {
+        return "wangming";
+    }
 }

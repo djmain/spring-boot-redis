@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
+//启用缓存
 @EnableCaching
 public class SpringBootRedisApplication
 {
