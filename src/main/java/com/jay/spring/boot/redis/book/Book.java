@@ -14,6 +14,10 @@ public class Book implements Serializable
     private String name;
     private int price;
 
+    public Book()
+    {
+    }
+
     public Book(Long id, String name, int price)
     {
         this.id = id;
